@@ -17,7 +17,7 @@ class Notification(models.Model):
         fromPhone = os.environ['TWILLIO_FROM']
         print(self.userMessage, self.userPhone)
         client = Client(id, auth)
-        message = client.messages.create(
+        client.messages.create(
             body=self.userMessage,
             from_=fromPhone,
             to=self.userPhone

@@ -8,9 +8,11 @@ class UserData(models.Model):
     userPhone = models.CharField(max_length=100)
     EMAIL = 'email'
     PHONE = 'phone'
+    NONE = 'none'
     PREFERENCE_CHOICES = [
         (EMAIL, 'email'),
-        (PHONE, 'phone')
+        (PHONE, 'phone'),
+        (NONE, 'none')
     ]
     notify = models.CharField(
         max_length=10,
